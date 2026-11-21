@@ -1,0 +1,38 @@
+
+> p2-playable-typescript-game@1.0.0 check:rules
+> npm run build && node --test tests/fixtures.test.mjs tests/learner.test.mjs
+
+
+> p2-playable-typescript-game@1.0.0 build
+> tsc -p tsconfig.json
+
+✔ F01 Start: initial state from the reference board (0.773625ms)
+✔ F02 East from the start is accepted and costs one move (0.215417ms)
+✔ F03 Moving into the wall is rejected and state is unchanged (0.102416ms)
+✔ F04 Moving off the board edge is rejected and state is unchanged (0.0705ms)
+✔ F05 Reaching the treasure scores ten and records it once (0.068916ms)
+✔ F06 Reaching the exit holding the treasure wins (0.064583ms)
+✔ F07 Final-move win: winning is checked before the zero-budget loss (0.056583ms)
+✔ F08 Spending the last move without winning loses (0.04725ms)
+✔ F09A Actions after a win are rejected and state is unchanged (0.0595ms)
+✔ F09B Actions after a loss are rejected and state is unchanged (0.0925ms)
+✔ F10A An unknown direction is rejected as invalid (0.057334ms)
+✔ F10B A missing direction is rejected as invalid (0.05075ms)
+✔ F11 Reaching the exit without the treasure does not win (0.414875ms)
+﹣ R01 Start: two rounds, no score (0.036625ms) # src/genre.ts selects "treasure"
+﹣ R02 A hit consumes one round and scores one (0.03725ms) # src/genre.ts selects "treasure"
+﹣ R03 A miss consumes one round without score (0.040084ms) # src/genre.ts selects "treasure"
+﹣ R04 Using the last round completes the range (0.022458ms) # src/genre.ts selects "treasure"
+﹣ R05A An unknown event is rejected and state is unchanged (0.023417ms) # src/genre.ts selects "treasure"
+﹣ R05B Events after completion are rejected (0.02ms) # src/genre.ts selects "treasure"
+✔ last move onto the exit WITHOUT the treasure is a loss, not a win (1.101625ms)
+✔ final-move win: exit with the treasure on the LAST move is a win (0.104042ms)
+✔ a rejected move never shares objects with the input state (0.117375ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 6
+ℹ todo 0
+ℹ duration_ms 123.470834
