@@ -1,0 +1,9 @@
+Mac Block 6 observations (2026-11-21; re-check with guided support)
+
+Verified local event: event-wall.png shows "Rejected: WALL" for run-8bb21c30 at (1,0), with 5 moves remaining, score 0, collected none and status playing. event-row.txt contains the complete sequence 2 row: south, rejected, with identical before and after states matching the screenshot. The telemetry region is outside the screenshot.
+
+slow: the owner confirmed observing "Loading game data..." change to "Game data verified" after refreshing. This is an owner-reported observation; no screenshot or timing measurement was captured.
+http: fault-http.png shows "Game data request failed: HTTP 503" in Game data, "No game yet: the game data could not be used." in Game, an empty State section and direction buttons shown disabled.
+malformed: fault-malformed.png shows "Game data was malformed JSON" in Game data, "No game yet: the game data could not be used." in Game, an empty State section and direction buttons shown disabled.
+unexpected: fault-unexpected.png shows "Unexpected game definition: this package supports only the fixed reference definition" in Game data, "No game yet: the game data could not be used." in Game, an empty State section and direction buttons shown disabled.
+collector=down: collector-down.png shows verified game data, "Moved east", position (1,0), 5 moves remaining, score 0, collected none, status playing and "Local recording unavailable". The move was retained despite the recording failure.
