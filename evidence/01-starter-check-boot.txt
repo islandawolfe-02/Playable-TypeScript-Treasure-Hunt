@@ -1,0 +1,21 @@
+# starter baseline, 2026-11-16T10:04:36Z, node v22.22.1
+PASS page GET /
+PASS event view GET /events.html
+PASS stylesheet GET /site.css
+PASS compiled module dist/app.js
+PASS compiled module dist/genre.js
+PASS compiled module dist/models.js
+PASS compiled module dist/rules.js
+PASS compiled module dist/api.js
+PASS compiled module dist/supplied/config.js
+PASS compiled module dist/supplied/controls.js
+PASS compiled module dist/supplied/render.js
+PASS compiled module dist/supplied/telemetry.js
+PASS compiled module dist/supplied/event-view.js
+PASS game data GET /api/boards/reference
+PASS game data GET /api/ranges/reference
+PASS unknown board GET /api/boards/other -> 404
+PASS health GET /healthz
+PASS collector rejects a malformed event -> 400
+PASS parseConfig accepts the reference definitions
+Boot checks pass: the scaffold is ready

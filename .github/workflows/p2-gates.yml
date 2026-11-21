@@ -1,0 +1,47 @@
+# P2 gates: the hosted equivalent of the manual's quality -> artifact -> verify route.
+# CI never deploys. The release it packs is a CI copy; the release you record is the one you pack on the Mac.
+name: p2-gates
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+defaults:
+  run:
+    shell: bash   # adds -o pipefail, so `| tee` cannot hide a failing check
+
+jobs:
+  gates:
+    name: Boot, rules, browser and release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.x"
+      - name: Install dependencies
+        run: npm ci
+      - name: Install Chromium for Playwright
+        run: npx playwright install --with-deps chromium
+      - name: Boot check
+        run: mkdir -p ci-evidence && npm run check:boot | tee ci-evidence/check-boot.txt
+      - name: Full quality gate (rules + 10 browser checks)
+        run: npm test | tee ci-evidence/npm-test.txt
+      - name: Pack and verify a release
+        run: |
+          python3 tools/release.py pack ../releases/ci-${GITHUB_RUN_NUMBER} | tee ci-evidence/release-pack.txt
+          python3 tools/release.py verify ../releases/ci-${GITHUB_RUN_NUMBER} | tee ci-evidence/release-verify.txt
+          cp ../releases/ci-${GITHUB_RUN_NUMBER}/release.json ci-evidence/release.json
+          echo "CI release ci-${GITHUB_RUN_NUMBER} for commit ${GITHUB_SHA} (CI copy, not deployed)" >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: p2-ci-evidence
+          path: |
+            ci-evidence/
+            test-results/

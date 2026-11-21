@@ -1,0 +1,14 @@
+# npm start -- --fault=... observed in Chromium, 2026-11-16T10:10:55Z
+## --fault=slow
+73ms Loading game data...
+1566ms Game data verified: Reference treasure hunt (3x3, 6 moves)
+after Start: status="Playing: collect the treasure, then reach the exit." state rows=5
+## --fault=http
+73ms Game data request failed: HTTP 503
+after Start: status="No verified game data yet: use Reload game data." state rows=0
+## --fault=malformed
+71ms Game data was malformed JSON
+after Start: status="No verified game data yet: use Reload game data." state rows=0
+## --fault=unexpected
+73ms Unexpected game definition: this package supports only the fixed reference definition
+after Start: status="No verified game data yet: use Reload game data." state rows=0

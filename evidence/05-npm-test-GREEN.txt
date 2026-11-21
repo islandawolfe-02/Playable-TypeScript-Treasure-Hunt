@@ -1,0 +1,38 @@
+# npm test (rules + browser), 2026-11-16T10:07:13Z, node v22.22.1
+ok 1 - F01 Start: initial state from the reference board
+ok 2 - F02 East from the start is accepted and costs one move
+ok 3 - F03 Moving into the wall is rejected and state is unchanged
+ok 4 - F04 Moving off the board edge is rejected and state is unchanged
+ok 5 - F05 Reaching the treasure scores ten and records it once
+ok 6 - F06 Reaching the exit holding the treasure wins
+ok 7 - F07 Final-move win: winning is checked before the zero-budget loss
+ok 8 - F08 Spending the last move without winning loses
+ok 9 - F09A Actions after a win are rejected and state is unchanged
+ok 10 - F09B Actions after a loss are rejected and state is unchanged
+ok 11 - F10A An unknown direction is rejected as invalid
+ok 12 - F10B A missing direction is rejected as invalid
+ok 13 - F11 Reaching the exit without the treasure does not win
+ok 14 - R01 Start: two rounds, no score # SKIP src/genre.ts selects "treasure"
+ok 15 - R02 A hit consumes one round and scores one # SKIP src/genre.ts selects "treasure"
+ok 16 - R03 A miss consumes one round without score # SKIP src/genre.ts selects "treasure"
+ok 17 - R04 Using the last round completes the range # SKIP src/genre.ts selects "treasure"
+ok 18 - R05A An unknown event is rejected and state is unchanged # SKIP src/genre.ts selects "treasure"
+ok 19 - R05B Events after completion are rejected # SKIP src/genre.ts selects "treasure"
+ok 20 - last move onto the exit WITHOUT the treasure is a loss, not a win
+ok 21 - final-move win: exit with the treasure on the LAST move is a win
+ok 22 - a rejected move never shares objects with the input state
+# tests 22
+# pass 16
+# fail 0
+# skipped 6
+  ✓   1 [chromium] › tests/browser/events.spec.mjs:14:1 › an actual action is recorded and visible in the local event view (456ms)
+  ✓   2 [chromium] › tests/browser/events.spec.mjs:29:1 › a restart starts a new run whose sequence begins at one (437ms)
+  ✓   3 [chromium] › tests/browser/events.spec.mjs:42:1 › collector failure is reported without undoing the action (199ms)
+  ✓   4 [chromium] › tests/browser/lifecycle.spec.mjs:5:1 › public start, progress, finish and fresh restart (456ms)
+  ✓   5 [chromium] › tests/browser/lifecycle.spec.mjs:26:1 › a rejected action is reported and leaves the state unchanged (307ms)
+  ✓   6 [chromium] › tests/browser/request-failure.spec.mjs:5:1 › loading is visible before the response, then the data is verified (122ms)
+  ✓   7 [chromium] › tests/browser/request-failure.spec.mjs:27:3 › HTTP failure is reported and no game starts from it (162ms)
+  ✓   8 [chromium] › tests/browser/request-failure.spec.mjs:27:3 › malformed JSON is reported and no game starts from it (158ms)
+  ✓   9 [chromium] › tests/browser/request-failure.spec.mjs:27:3 › unexpected definition is reported and no game starts from it (161ms)
+  ✓  10 [chromium] › tests/browser/request-failure.spec.mjs:37:1 › a failed reload preserves the last confirmed session (285ms)
+  10 passed (5.6s)

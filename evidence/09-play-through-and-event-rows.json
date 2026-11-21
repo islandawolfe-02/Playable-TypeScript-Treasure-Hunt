@@ -1,0 +1,99 @@
+[
+ {
+  "label": "page loaded",
+  "api": "Game data verified: Reference treasure hunt (3x3, 6 moves)",
+  "status": "Ready: press Start game.",
+  "result": "No action yet",
+  "telemetry": "No event recorded yet",
+  "position": null,
+  "movesRemaining": null,
+  "score": null,
+  "collected": null,
+  "state": null
+ },
+ {
+  "runId": "run-ba71a581",
+  "label": "start",
+  "api": "Game data verified: Reference treasure hunt (3x3, 6 moves)",
+  "status": "Playing: collect the treasure, then reach the exit.",
+  "result": "New game started",
+  "telemetry": "No event recorded yet",
+  "position": "(0,0)",
+  "movesRemaining": "6",
+  "score": "0",
+  "collected": "none",
+  "state": "playing"
+ },
+ {
+  "label": "east",
+  "api": "Game data verified: Reference treasure hunt (3x3, 6 moves)",
+  "status": "Playing: collect the treasure, then reach the exit.",
+  "result": "Moved east",
+  "telemetry": "Recorded locally",
+  "position": "(1,0)",
+  "movesRemaining": "5",
+  "score": "0",
+  "collected": "none",
+  "state": "playing"
+ },
+ {
+  "label": "south",
+  "api": "Game data verified: Reference treasure hunt (3x3, 6 moves)",
+  "status": "Playing: collect the treasure, then reach the exit.",
+  "result": "Rejected: WALL",
+  "telemetry": "Recorded locally",
+  "position": "(1,0)",
+  "movesRemaining": "5",
+  "score": "0",
+  "collected": "none",
+  "state": "playing"
+ },
+ {
+  "label": "east",
+  "api": "Game data verified: Reference treasure hunt (3x3, 6 moves)",
+  "status": "Playing: collect the treasure, then reach the exit.",
+  "result": "Moved east",
+  "telemetry": "Recorded locally",
+  "position": "(2,0)",
+  "movesRemaining": "4",
+  "score": "10",
+  "collected": "t1",
+  "state": "playing"
+ },
+ {
+  "label": "south",
+  "api": "Game data verified: Reference treasure hunt (3x3, 6 moves)",
+  "status": "Playing: collect the treasure, then reach the exit.",
+  "result": "Moved south",
+  "telemetry": "Recorded locally",
+  "position": "(2,1)",
+  "movesRemaining": "3",
+  "score": "10",
+  "collected": "t1",
+  "state": "playing"
+ },
+ {
+  "label": "south",
+  "api": "Game data verified: Reference treasure hunt (3x3, 6 moves)",
+  "status": "You won! Press Restart to play again.",
+  "result": "Moved south",
+  "telemetry": "Recorded locally",
+  "position": "(2,2)",
+  "movesRemaining": "2",
+  "score": "10",
+  "collected": "t1",
+  "state": "won"
+ },
+ {
+  "buttonsDisabled": true
+ },
+ {
+  "eventView": [
+   "2026-11-16T10:10:25.492Z run-ba71a581 1 east accepted {\"position\":{\"x\":0,\"y\":0},\"movesRemaining\":6,\"score\":0,\"collected\":[],\"status\":\"playing\"} {\"position\":{\"x\":1,\"y\":0},\"movesRemaining\":5,\"score\":0,\"collected\":[],\"status\":\"playing\"}",
+   "2026-11-16T10:10:25.753Z run-ba71a581 2 south rejected {\"position\":{\"x\":1,\"y\":0},\"movesRemaining\":5,\"score\":0,\"collected\":[],\"status\":\"playing\"} {\"position\":{\"x\":1,\"y\":0},\"movesRemaining\":5,\"score\":0,\"collected\":[],\"status\":\"playing\"}",
+   "2026-11-16T10:10:25.934Z run-ba71a581 3 east accepted {\"position\":{\"x\":1,\"y\":0},\"movesRemaining\":5,\"score\":0,\"collected\":[],\"status\":\"playing\"} {\"position\":{\"x\":2,\"y\":0},\"movesRemaining\":4,\"score\":10,\"collected\":[\"t1\"],\"status\":\"playing\"}",
+   "2026-11-16T10:10:26.135Z run-ba71a581 4 south accepted {\"position\":{\"x\":2,\"y\":0},\"movesRemaining\":4,\"score\":10,\"collected\":[\"t1\"],\"status\":\"playing\"} {\"position\":{\"x\":2,\"y\":1},\"movesRemaining\":3,\"score\":10,\"collected\":[\"t1\"],\"status\":\"playing\"}",
+   "2026-11-16T10:10:26.355Z run-ba71a581 5 south accepted {\"position\":{\"x\":2,\"y\":1},\"movesRemaining\":3,\"score\":10,\"collected\":[\"t1\"],\"status\":\"playing\"} {\"position\":{\"x\":2,\"y\":2},\"movesRemaining\":2,\"score\":10,\"collected\":[\"t1\"],\"status\":\"won\"}"
+  ]
+ }
+]

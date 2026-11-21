@@ -1,0 +1,22 @@
+# DEFECT copy: loss checked before win (src/rules.ts), 2026-11-16T10:06:34Z
+79:  const status = movesRemaining === 0 ? "lost" : atExit && hasAll ? "won" : "playing";
+not ok 7 - F07 Final-move win: winning is checked before the zero-budget loss
+    + actual - expected
+    +     status: 'lost'
+    -     status: 'won'
+  expected:
+      status: 'won'
+  actual:
+      status: 'lost'
+not ok 22 - final-move win: exit with the treasure on the LAST move is a win
+    + actual - expected
+    +   status: 'lost'
+    -   status: 'won'
+  expected:
+    status: 'won'
+  actual:
+    status: 'lost'
+# tests 22
+# pass 14
+# fail 2
+# skipped 6

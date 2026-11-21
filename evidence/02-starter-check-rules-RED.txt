@@ -1,0 +1,25 @@
+# starter baseline (unchanged), 2026-11-16T10:04:37Z
+not ok 1 - F01 Start: initial state from the reference board
+not ok 2 - F02 East from the start is accepted and costs one move
+not ok 3 - F03 Moving into the wall is rejected and state is unchanged
+not ok 4 - F04 Moving off the board edge is rejected and state is unchanged
+not ok 5 - F05 Reaching the treasure scores ten and records it once
+not ok 6 - F06 Reaching the exit holding the treasure wins
+not ok 7 - F07 Final-move win: winning is checked before the zero-budget loss
+not ok 8 - F08 Spending the last move without winning loses
+not ok 9 - F09A Actions after a win are rejected and state is unchanged
+not ok 10 - F09B Actions after a loss are rejected and state is unchanged
+not ok 11 - F10A An unknown direction is rejected as invalid
+not ok 12 - F10B A missing direction is rejected as invalid
+not ok 13 - F11 Reaching the exit without the treasure does not win
+ok 14 - R01 Start: two rounds, no score # SKIP src/genre.ts selects "treasure"
+ok 15 - R02 A hit consumes one round and scores one # SKIP src/genre.ts selects "treasure"
+ok 16 - R03 A miss consumes one round without score # SKIP src/genre.ts selects "treasure"
+ok 17 - R04 Using the last round completes the range # SKIP src/genre.ts selects "treasure"
+ok 18 - R05A An unknown event is rejected and state is unchanged # SKIP src/genre.ts selects "treasure"
+ok 19 - R05B Events after completion are rejected # SKIP src/genre.ts selects "treasure"
+not ok 20 - learner regression: changed-input case (not written yet)
+# tests 20
+# pass 0
+# fail 14
+# skipped 6

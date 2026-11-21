@@ -1,0 +1,6 @@
+# typed-model check: initialState status set to "paused" (not in Status), 2026-11-16T10:07:22Z
+48:    status: "paused",
+src/rules.ts(48,5): error TS2322: Type '"paused"' is not assignable to type 'Status'.
+tsc exit 2
+# restored valid source
+tsc exit 0

@@ -1,0 +1,15 @@
+node_modules/
+dist/
+test-results/
+playwright-report/
+recovery/
+ci-evidence/
+
+# Personal step-by-step notes, kept off GitHub
+instructions.md
+
+# Never commit credentials
+.env*
+*.pem
+
+.DS_Store
