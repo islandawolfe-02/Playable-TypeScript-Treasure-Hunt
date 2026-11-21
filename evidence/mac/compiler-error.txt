@@ -1,0 +1,1 @@
+src/rules.ts(48,5): error TS2322: Type '"paused"' is not assignable to type 'Status'.
