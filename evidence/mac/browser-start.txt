@@ -1,0 +1,26 @@
+
+> p2-playable-typescript-game@1.0.0 start
+> npm run build && node server/serve.mjs
+
+
+> p2-playable-typescript-game@1.0.0 build
+> tsc -p tsconfig.json
+
+P2 (development) listening on http://127.0.0.1:4182/
+Local event view: /events.html  (process memory only; Ctrl+C discards stored events)
+{"ts":"2026-11-21T14:40:10.559Z","job":"academy-p2","request_id":"e5e426a7-7565-4ff6-a7e2-ce5f13789d4c","method":"GET","path":"/","status":200,"duration_ms":33,"release":"development","environment":"local"}
+{"ts":"2026-11-21T14:40:10.597Z","job":"academy-p2","request_id":"cdb02a8c-9ae5-44c2-b9c4-f73b1f6e9aa9","method":"GET","path":"/site.css","status":200,"duration_ms":1,"release":"development","environment":"local"}
+{"ts":"2026-11-21T14:40:10.599Z","job":"academy-p2","request_id":"da897090-c181-42e3-bb4e-e50b74100262","method":"GET","path":"/dist/app.js","status":200,"duration_ms":1,"release":"development","environment":"local"}
+{"ts":"2026-11-21T14:40:10.616Z","job":"academy-p2","request_id":"b6362871-c96e-4db6-ad6f-55027ea362b2","method":"GET","path":"/dist/genre.js","status":200,"duration_ms":1,"release":"development","environment":"local"}
+{"ts":"2026-11-21T14:40:10.619Z","job":"academy-p2","request_id":"1595759c-8bb0-4a3e-9833-abb7ff2c43ac","method":"GET","path":"/dist/api.js","status":200,"duration_ms":4,"release":"development","environment":"local"}
+{"ts":"2026-11-21T14:40:10.627Z","job":"academy-p2","request_id":"fbed50ba-7c49-442a-91c7-85fbf0de73a1","method":"GET","path":"/dist/rules.js","status":200,"duration_ms":4,"release":"development","environment":"local"}
+{"ts":"2026-11-21T14:40:10.629Z","job":"academy-p2","request_id":"6b5d308c-b5d9-4900-9490-1dc7149b4f98","method":"GET","path":"/dist/supplied/controls.js","status":200,"duration_ms":5,"release":"development","environment":"local"}
+{"ts":"2026-11-21T14:40:10.640Z","job":"academy-p2","request_id":"a10c3666-b922-45f6-873f-735e0bc3d749","method":"GET","path":"/dist/supplied/config.js","status":200,"duration_ms":12,"release":"development","environment":"local"}
+{"ts":"2026-11-21T14:40:10.643Z","job":"academy-p2","request_id":"287a4331-25d2-45ca-9b8d-fac2cced778a","method":"GET","path":"/dist/supplied/render.js","status":200,"duration_ms":16,"release":"development","environment":"local"}
+{"ts":"2026-11-21T14:40:10.645Z","job":"academy-p2","request_id":"e869fb1b-f76d-4c65-b9f2-7c492525bc42","method":"GET","path":"/apple-touch-icon-precomposed.png","status":404,"duration_ms":1,"release":"development","environment":"local"}
+{"ts":"2026-11-21T14:40:10.646Z","job":"academy-p2","request_id":"d9f06168-9853-482b-8340-2e6ec927300b","method":"GET","path":"/dist/supplied/telemetry.js","status":200,"duration_ms":10,"release":"development","environment":"local"}
+{"ts":"2026-11-21T14:40:10.659Z","job":"academy-p2","request_id":"0210672c-9239-436a-b67c-35da67d6b8a4","method":"GET","path":"/api/boards/reference","status":200,"duration_ms":2,"release":"development","environment":"local"}
+{"ts":"2026-11-21T14:40:10.674Z","job":"academy-p2","request_id":"51d58ed4-de31-4f7d-9061-9132d7336556","method":"GET","path":"/favicon.ico","status":404,"duration_ms":5,"release":"development","environment":"local"}
+{"ts":"2026-11-21T14:40:10.914Z","job":"academy-p2","request_id":"ed9557f5-92d0-4199-99c0-ea5138899d5d","method":"GET","path":"/apple-touch-icon.png","status":404,"duration_ms":0,"release":"development","environment":"local"}
+{"ts":"2026-11-21T14:40:10.969Z","job":"academy-p2","request_id":"a5efa0a1-04ef-48e9-807d-be8b3705a682","method":"GET","path":"/favicon.ico","status":404,"duration_ms":1,"release":"development","environment":"local"}
+{"ts":"2026-11-21T14:40:34.302Z","job":"academy-p2","request_id":"d7cd51b0-3aeb-40c3-a763-de8eb66b6f68","method":"POST","path":"/api/events","status":201,"duration_ms":5,"release":"development","environment":"local"}
