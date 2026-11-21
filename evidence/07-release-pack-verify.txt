@@ -1,0 +1,15 @@
+# release, 2026-11-16T10:07:24Z
+
+> p2-playable-typescript-game@1.0.0 check:rules
+> npm run build && node --test tests/fixtures.test.mjs tests/learner.test.mjs
+
+
+> p2-playable-typescript-game@1.0.0 build
+> tsc -p tsconfig.json
+
+TAP version 13
+1..22
+Rule gate: npm run check:rules
+Packed release playable-01 (treasure): 47 files -> /home/bp-173lq/scratch-p2/releases/playable-01
+Run it with: python3 /home/bp-173lq/scratch-p2/releases/playable-01/serve.py
+Release playable-01 verified: 47 files match release.json (SHA-256)

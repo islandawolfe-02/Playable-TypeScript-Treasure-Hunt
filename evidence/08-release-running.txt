@@ -1,0 +1,17 @@
+# release playable-01 running, 2026-11-16T10:07:48Z
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+X-Lab-Release: playable-01
+Healthy
+# P2_URL=http://127.0.0.1:4182 npm run check:browser (against the RUNNING release)
+  ✓   1 [chromium] › tests/browser/events.spec.mjs:14:1 › an actual action is recorded and visible in the local event view (584ms)
+  ✓   2 [chromium] › tests/browser/events.spec.mjs:29:1 › a restart starts a new run whose sequence begins at one (457ms)
+  ✓   3 [chromium] › tests/browser/events.spec.mjs:42:1 › collector failure is reported without undoing the action (239ms)
+  ✓   4 [chromium] › tests/browser/lifecycle.spec.mjs:5:1 › public start, progress, finish and fresh restart (464ms)
+  ✓   5 [chromium] › tests/browser/lifecycle.spec.mjs:26:1 › a rejected action is reported and leaves the state unchanged (296ms)
+  ✓   6 [chromium] › tests/browser/request-failure.spec.mjs:5:1 › loading is visible before the response, then the data is verified (119ms)
+  ✓   7 [chromium] › tests/browser/request-failure.spec.mjs:27:3 › HTTP failure is reported and no game starts from it (127ms)
+  ✓   8 [chromium] › tests/browser/request-failure.spec.mjs:27:3 › malformed JSON is reported and no game starts from it (131ms)
+  ✓   9 [chromium] › tests/browser/request-failure.spec.mjs:27:3 › unexpected definition is reported and no game starts from it (173ms)
+  ✓  10 [chromium] › tests/browser/request-failure.spec.mjs:37:1 › a failed reload preserves the last confirmed session (267ms)
+  10 passed (4.1s)
