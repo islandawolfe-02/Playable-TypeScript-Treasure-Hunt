@@ -1,0 +1,19 @@
+
+> p2-playable-typescript-game@1.0.0 check:browser
+> playwright test
+
+
+Running 10 tests using 1 worker
+
+  ✓   1 [chromium] › tests/browser/events.spec.mjs:14:1 › an actual action is recorded and visible in the local event view (492ms)
+  ✓   2 [chromium] › tests/browser/events.spec.mjs:29:1 › a restart starts a new run whose sequence begins at one (305ms)
+  ✓   3 [chromium] › tests/browser/events.spec.mjs:42:1 › collector failure is reported without undoing the action (157ms)
+  ✓   4 [chromium] › tests/browser/lifecycle.spec.mjs:5:1 › public start, progress, finish and fresh restart (358ms)
+  ✓   5 [chromium] › tests/browser/lifecycle.spec.mjs:26:1 › a rejected action is reported and leaves the state unchanged (207ms)
+  ✓   6 [chromium] › tests/browser/request-failure.spec.mjs:5:1 › loading is visible before the response, then the data is verified (75ms)
+  ✓   7 [chromium] › tests/browser/request-failure.spec.mjs:27:3 › HTTP failure is reported and no game starts from it (112ms)
+  ✓   8 [chromium] › tests/browser/request-failure.spec.mjs:27:3 › malformed JSON is reported and no game starts from it (109ms)
+  ✓   9 [chromium] › tests/browser/request-failure.spec.mjs:27:3 › unexpected definition is reported and no game starts from it (113ms)
+  ✓  10 [chromium] › tests/browser/request-failure.spec.mjs:37:1 › a failed reload preserves the last confirmed session (187ms)
+
+  10 passed (2.9s)

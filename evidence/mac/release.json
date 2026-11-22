@@ -1,0 +1,244 @@
+{
+  "name": "playable-02",
+  "genre": "treasure",
+  "createdUtc": "2026-11-22T07:19:22Z",
+  "gate": "npm run check:rules passed",
+  "scope": "local release: compiled browser code, supplied API and game data; not a container or BP deployment",
+  "files": [
+    {
+      "path": "dist/api.js",
+      "sha256": "f6bfc2727744aa38842878381c12428b4add71be60bbf4edaaa36aded2ee2848",
+      "bytes": 1572
+    },
+    {
+      "path": "dist/api.js.map",
+      "sha256": "f2ffb96f6d81f344e828264afb2b96c058d7e2574d33d33f8185df2a9be67cf1",
+      "bytes": 1159
+    },
+    {
+      "path": "dist/app.js",
+      "sha256": "062b23e384f933a231eac25bb191ca2c79a693766c946d4e261262aed9177903",
+      "bytes": 2979
+    },
+    {
+      "path": "dist/app.js.map",
+      "sha256": "1e6664ddaa3b12ee27b76b7ef4b0dd4d89fd35519b0f34388671e22342b9eb9c",
+      "bytes": 2761
+    },
+    {
+      "path": "dist/genre.js",
+      "sha256": "139157114e88f734a8730a7f78fc37145666c93f0b4ba8edbfc99f6ef152413f",
+      "bytes": 516
+    },
+    {
+      "path": "dist/genre.js.map",
+      "sha256": "54432683782694c9454836d103345de5b69cf1c13c48fba4a7e5811e69c56aee",
+      "bytes": 207
+    },
+    {
+      "path": "dist/models.js",
+      "sha256": "00a2381a9e1c4aba199021d40d6a32d13208b7457a3c64d11428743f2bb4b652",
+      "bytes": 240
+    },
+    {
+      "path": "dist/models.js.map",
+      "sha256": "329a19aafe541dd6323257f0a045cd9ac1f605eefc01a37dbf3ff0187cbb2182",
+      "bytes": 128
+    },
+    {
+      "path": "dist/rules.js",
+      "sha256": "3735dff7693662d99fbd4a01bb2451b570e2db026b1a45cedea00f610d4a1137",
+      "bytes": 3169
+    },
+    {
+      "path": "dist/rules.js.map",
+      "sha256": "e94889035bc30100c2ebd8625d00e63cfcd4b46e38332c1ab379e639c3301cec",
+      "bytes": 3279
+    },
+    {
+      "path": "dist/supplied/config.js",
+      "sha256": "d37d9e92bb5c9a15ac5f88bf6b2ec6e10696f7514a8f918f76f72328e0c0eebc",
+      "bytes": 4352
+    },
+    {
+      "path": "dist/supplied/config.js.map",
+      "sha256": "4367f1ece145a2b763792ec594810b1e29fc91f77e0264ae2c407ff804390192",
+      "bytes": 4652
+    },
+    {
+      "path": "dist/supplied/controls.js",
+      "sha256": "a96a298e09d2c768ca41b89eaf5d6a60902ef8d9340575c06da7ab73a369c916",
+      "bytes": 2894
+    },
+    {
+      "path": "dist/supplied/controls.js.map",
+      "sha256": "1ae26f334945231f40ba59ce023be2bc0f414ff314dffab44e591b4a64393b42",
+      "bytes": 2472
+    },
+    {
+      "path": "dist/supplied/event-view.js",
+      "sha256": "d7a3a9d0569e852a7db73b73f392b2b6aab8cf88453633941d4a2c450d2d2cab",
+      "bytes": 2454
+    },
+    {
+      "path": "dist/supplied/event-view.js.map",
+      "sha256": "7b77750a2c339b06edb124f21c005e510b6222146815adfefe698a686bf6a8b0",
+      "bytes": 2860
+    },
+    {
+      "path": "dist/supplied/render.js",
+      "sha256": "8ea798118eaddb967ffaf6b75561f6ec0b49c46e7f291c7a6418fe0ceb522f45",
+      "bytes": 2280
+    },
+    {
+      "path": "dist/supplied/render.js.map",
+      "sha256": "a8344bfcab71d0b4da2abf679788abcc19b1be1b78cf175077e894d0fac46265",
+      "bytes": 2035
+    },
+    {
+      "path": "dist/supplied/telemetry.js",
+      "sha256": "579a248e5c923829e250adc790b065dac0689adc884657b180be8d92be12a8d2",
+      "bytes": 1421
+    },
+    {
+      "path": "dist/supplied/telemetry.js.map",
+      "sha256": "f2d5c4978dc6c9813fc125435a7899b16dbe1a1e7282e049e77b5188d2dc1990",
+      "bytes": 892
+    },
+    {
+      "path": "events.html",
+      "sha256": "941ebe6aee5e3a2d10ea07fed0672bf1c1a2885c090d5035c579af5613136aa3",
+      "bytes": 1438
+    },
+    {
+      "path": "fixtures/board-reference.json",
+      "sha256": "e019d7b0962b55dc4ded0b9f556124d58cf8acb9a45c29b514144d0b429b56c2",
+      "bytes": 267
+    },
+    {
+      "path": "fixtures/range-reference.json",
+      "sha256": "81e0c895e59bf3745f2cb48839fbcbf2985bcb4a2f6b4f1a4e5c12909fd926a0",
+      "bytes": 79
+    },
+    {
+      "path": "fixtures/range/R01.json",
+      "sha256": "25487ef7ee40d2379032e7d9363579d2042982a1aef3c88ceb4d750512aa4177",
+      "bytes": 291
+    },
+    {
+      "path": "fixtures/range/R02.json",
+      "sha256": "33b0985027cbd14c45a703109e5e59f6b3028ef85d06e8b2a15de465b4ca1c2e",
+      "bytes": 399
+    },
+    {
+      "path": "fixtures/range/R03.json",
+      "sha256": "1beca187d68c5743f8ebb6cdc3b103dd69536cd6dced8defd59be4587f044bf1",
+      "bytes": 400
+    },
+    {
+      "path": "fixtures/range/R04.json",
+      "sha256": "7e16a90decb15903ca4f7484ce20fcbbfeeb1e6f7245fd66cf694efcc4dc321d",
+      "bytes": 402
+    },
+    {
+      "path": "fixtures/range/R05A.json",
+      "sha256": "32997dc55b2c9bc752a57ccce9d4a2d8b11827a6ee5e8efbf34bdbeb9e40fc36",
+      "bytes": 427
+    },
+    {
+      "path": "fixtures/range/R05B.json",
+      "sha256": "cb19ae6a1a2e63c1425e630330797aca1b6ffeb59095339b6e685b6d409fd3fd",
+      "bytes": 413
+    },
+    {
+      "path": "fixtures/treasure/F01.json",
+      "sha256": "1f935d5eba75a21129a5f5dda3da50e3878a251e604ae4254c283c5e0b867b81",
+      "bytes": 380
+    },
+    {
+      "path": "fixtures/treasure/F02.json",
+      "sha256": "65537d74cef153f6aaa73060a15b8d267b87bcbabd9a09de3ef15982f55d64d2",
+      "bytes": 569
+    },
+    {
+      "path": "fixtures/treasure/F03.json",
+      "sha256": "f88e3d86a0b8cb9cc3582a9652b23caec42d599a311fb89f87a263724bc828b1",
+      "bytes": 578
+    },
+    {
+      "path": "fixtures/treasure/F04.json",
+      "sha256": "3a15e29c196577297888f969603add7c6dd2b21bab0ff4f14bc91fed206c194d",
+      "bytes": 583
+    },
+    {
+      "path": "fixtures/treasure/F05.json",
+      "sha256": "a7645ad99e5c5164d39fc360d5ec93b56c9eb57c6d322cb11cfa9a770220fb09",
+      "bytes": 592
+    },
+    {
+      "path": "fixtures/treasure/F06.json",
+      "sha256": "33126bb756e9199bfefc55914afe4cab62d897e44441583f5d86e14fb83987bf",
+      "bytes": 597
+    },
+    {
+      "path": "fixtures/treasure/F07.json",
+      "sha256": "d860fd35b6a109f36a4c7a621c670270b3346205b261a5309372c0a6620c5438",
+      "bytes": 616
+    },
+    {
+      "path": "fixtures/treasure/F08.json",
+      "sha256": "24bfdeefeb0938971bb87d3248a5383686d368ad0be786781e8d938eab02d3ac",
+      "bytes": 560
+    },
+    {
+      "path": "fixtures/treasure/F09A.json",
+      "sha256": "a7748f21cde6efa4b56fafa25d83bb329648580d290983c1b4c99388c6528f15",
+      "bytes": 617
+    },
+    {
+      "path": "fixtures/treasure/F09B.json",
+      "sha256": "2600c807a4a6c6d8200789bce4091ce77617eb770f372214a745fd0bbe45740f",
+      "bytes": 582
+    },
+    {
+      "path": "fixtures/treasure/F10A.json",
+      "sha256": "99e155725357407c1e5a7fc64b6c15d51bf19860f6ee66974a448e455b68cdf8",
+      "bytes": 574
+    },
+    {
+      "path": "fixtures/treasure/F10B.json",
+      "sha256": "b89378b133a566ae389ca2851943c8680eb5f97f8f8f537517ac9eea63cd16a8",
+      "bytes": 550
+    },
+    {
+      "path": "fixtures/treasure/F11.json",
+      "sha256": "b92f3743494f4efef6077e3639b664e350f03b0f49830364ca7497b33e69e26a",
+      "bytes": 571
+    },
+    {
+      "path": "index.html",
+      "sha256": "d5633b1c99f5a850de90868caeaad51ba38fc21ab99ffccd0fe9cf63e2cb7ad3",
+      "bytes": 1829
+    },
+    {
+      "path": "serve.py",
+      "sha256": "2b6f6dd84f3056c333cdc3332b66c4f4d72edd3bfec5ca84c44e5b1e8abf614a",
+      "bytes": 874
+    },
+    {
+      "path": "server/app.mjs",
+      "sha256": "db8de959d3f278d4cb8584a24e1516215970be8772407eba54469a116bf8216b",
+      "bytes": 7164
+    },
+    {
+      "path": "server/serve.mjs",
+      "sha256": "e8f21ddeb2a152495deaf529eb88bb50b5ed21f30d98f8e4a00178d7f4e71656",
+      "bytes": 2555
+    },
+    {
+      "path": "site.css",
+      "sha256": "766206099608def669a5f4100882a6153a53946b296c90e3d2c40c494726130a",
+      "bytes": 1866
+    }
+  ]
+}
