@@ -70,18 +70,82 @@ A failed **reload** only changes `api`. The game in progress and its buttons sta
 
 ## Lifecycle
 
+Board requests and the game session have separate lifecycles. A reload can succeed or fail while a game is
+playing, won or lost; it never resets that game's state or changes which move buttons are enabled.
+
+### Board loading (`api` region)
+
 ```mermaid
 stateDiagram-v2
-  [*] --> NoData: page load (Loading...)
-  NoData --> Ready: data verified
-  NoData --> NoData: HTTP / malformed / unexpected (shown in api)
-  Ready --> Playing: Start (new runId, sequence 0)
-  Playing --> Playing: move (accepted or rejected; event recorded)
-  Playing --> Finished: won or lost (buttons disabled)
-  Playing --> Playing: Restart (new runId)
-  Finished --> Playing: Restart (new runId)
-  Playing --> Playing: Reload fails (state kept)
+  direction LR
+  accTitle: Board loading and reload
+  accDescr: Every request either verifies the reference board or reports an error. Reload retries the request without resetting the game.
+
+  state "Loading game data..." as Loading
+  state "Game data verified" as Verified
+  state "Request failed" as Failed
+
+  [*] --> Loading: Page load
+  Loading --> Verified: Valid reference board
+  Loading --> Failed: HTTP / malformed / unexpected
+  Verified --> Loading: Reload game data
+  Failed --> Loading: Reload game data
+
+  classDef pending fill:#eff6ff,stroke:#2563eb,color:#0f172a
+  classDef success fill:#dcfce7,stroke:#15803d,color:#14532d
+  classDef failure fill:#fee2e2,stroke:#b91c1c,color:#7f1d1d
+  class Loading pending
+  class Verified success
+  class Failed failure
 ```
+
+A successful request replaces the retained config. A failed request keeps the last verified config, if any.
+Until a board has been verified, Start and Restart cannot begin a game and the move buttons stay disabled.
+
+### Game session (`status` region)
+
+```mermaid
+stateDiagram-v2
+  direction TB
+  accTitle: Start, play, finish and restart
+  accDescr: A verified board allows a fresh run. Moves continue play, win or lose. Start and Restart create a fresh run from any session state.
+
+  state "Ready to start" as Ready
+  state "Fresh run" as Fresh
+  state "Playing" as Playing
+  state "Finished (moves disabled)" as Finished {
+    state "Won" as Won
+    state "Lost" as Lost
+  }
+
+  [*] --> Ready: First board verified
+  Ready --> Fresh: Start / Restart
+  Fresh --> Playing
+  Playing --> Playing: Move keeps status playing
+  Playing --> Won: Exit with every treasure
+  Playing --> Lost: Zero moves without a win
+  Playing --> Fresh: Start / Restart
+  Finished --> Fresh: Start / Restart
+
+  note right of Fresh
+    Reset game state
+    New runId, sequence 0
+  end note
+
+  classDef ready fill:#f1f5f9,stroke:#64748b,color:#0f172a
+  classDef active fill:#eff6ff,stroke:#2563eb,color:#0f172a
+  classDef won fill:#dcfce7,stroke:#15803d,color:#14532d
+  classDef lost fill:#fee2e2,stroke:#b91c1c,color:#7f1d1d
+  class Ready ready
+  class Fresh,Playing active
+  class Won won
+  class Lost lost
+```
+
+Move buttons are enabled only while playing. Rejected moves keep the state unchanged; accepted moves can
+continue play, win or lose. **Winning takes priority over losing on the last move.** Each move, accepted or
+rejected, increments the event sequence and attempts one local event POST. Recording success or failure is
+shown in `telemetry` and never rolls back the move.
 
 ## Source → artifact → process
 
