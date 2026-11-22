@@ -137,6 +137,21 @@ go in `evidence/mac/`.
 ## 11. Assistance and status
 - Supplied examples/hints/checkpoints reused (name them): W2.10 reference rules (same check order); supplied
   fixtures, browser checks and release tools used as given.
+- Mac changes (2026-11-22): the win-message wording was updated as recorded in section 10. No game bug fixes
+  or repository dependency version changes were made during the Mac re-check.
+- Support received on the Mac: guided setup and check commands, command troubleshooting, review of saved
+  evidence, suggested win-message wording and drafting of the evidence and reflection text.
+- Mac environment checked on 2026-11-22: Node 26.13.1, npm 11.20.0 and Python 3.15.2. The original work-laptop
+  environment is recorded separately below. When `rg` was unavailable in the terminal, the built-in `grep`
+  command was used to capture the release header.
+- Mac validation retained: `evidence/mac/acceptance-npm-test.txt` records 16 rule tests passed, 0 failed,
+  6 skipped and 10 browser checks passed. The `playable-02` release has 47 files verified against its SHA-256
+  inventory; its header and the 10 passing browser checks against the running release are saved in `evidence/mac/`.
+- Next-week handoff: revisit the order of checks in `evaluate()`. Trace South from (2,1) with 1 move remaining
+  and t1 collected: reaching the exit must win even though the move budget becomes zero. Compare this with
+  the same move without t1, which must lose, and explain why the win check comes before the loss check.
+- Outstanding work-laptop follow-up: complete the W2.10 section 8 assistance fields identified in the private
+  runbook. Their completion has not been verified on the Mac.
 - Status per outcome: demonstrated independently / demonstrated with a prompt / completed with guided support / not yet demonstrated
   1 typed models: completed with guided support · 2 core logic: completed with guided support ·
   3 browser lifecycle: completed with guided support · 4 API: completed with guided support ·
