@@ -115,8 +115,24 @@ go in `evidence/mac/`.
 - Changed invalid or completion input: prediction from the brief, execution, actual result: prediction: the last move
   onto the exit without t1 is a loss. Executed as the learner test "last move onto the exit WITHOUT the treasure is a
   loss". Actual: accepted, (2,2), 0 moves, score 0, `lost`, matching the prediction.
-- Public-start trace and one bounded change you made yourself: trace in section 5 (`run-ba71a581`). Bounded change:
-  ______
+- Public-start trace and one bounded change I made myself:
+  - The original work-laptop trace remains in section 5 (`run-ba71a581`). On the Mac (2026-11-22), I manually
+    changed `STATUS_TEXT.won` in `src/app.ts` from "You won! Press Restart to play again." to
+    "You won! Treasure secured. Press Restart for another adventure.".
+    The revised message mentions the treasure and retains the Restart instruction. This is a display-text change;
+    the game rules are unchanged.
+  - Validation: [`evidence/mac/acceptance-npm-test.txt`](evidence/mac/acceptance-npm-test.txt) records 16 rule
+    tests passed, 0 failed, 6 skipped, followed by all 10 browser checks passed.
+  - Mac demo recording: [`evidence/mac/acceptance-demo.mov`](evidence/mac/acceptance-demo.mov), showing the
+    local game and its local event view. The wall and winning examples below are separate runs in the recording.
+  - Wall example, `run-dbc147e3`: East is accepted, then South shows "Rejected: WALL". The state remains
+    (1,0), 5 moves, score 0, collected none, playing. The event view shows sequence 2, south, rejected, with
+    identical before/after states matching the page.
+  - Winning example, `run-faf97075`: a fresh (0,0), 6-move game follows East, East, South, South to (2,2),
+    with 2 moves remaining, score 10, collected t1 and status won. The page shows the revised win message and
+    disabled direction buttons. The event view shows all four accepted actions; sequence 4 ends in the won state.
+  - A later fresh game, `run-669c388f`, shows (0,0), 6 moves, score 0, collected none, playing and enabled
+    direction buttons. Its event view then shows East accepted and South rejected at sequence 2.
 
 ## 11. Assistance and status
 - Supplied examples/hints/checkpoints reused (name them): W2.10 reference rules (same check order); supplied

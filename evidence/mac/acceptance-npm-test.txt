@@ -1,0 +1,61 @@
+
+> p2-playable-typescript-game@1.0.0 test
+> npm run check:rules && npm run check:browser
+
+
+> p2-playable-typescript-game@1.0.0 check:rules
+> npm run build && node --test tests/fixtures.test.mjs tests/learner.test.mjs
+
+
+> p2-playable-typescript-game@1.0.0 build
+> tsc -p tsconfig.json
+
+✔ F01 Start: initial state from the reference board (0.763333ms)
+✔ F02 East from the start is accepted and costs one move (0.189291ms)
+✔ F03 Moving into the wall is rejected and state is unchanged (0.102083ms)
+✔ F04 Moving off the board edge is rejected and state is unchanged (0.070334ms)
+✔ F05 Reaching the treasure scores ten and records it once (0.067458ms)
+✔ F06 Reaching the exit holding the treasure wins (0.06325ms)
+✔ F07 Final-move win: winning is checked before the zero-budget loss (0.059542ms)
+✔ F08 Spending the last move without winning loses (0.048ms)
+✔ F09A Actions after a win are rejected and state is unchanged (0.058667ms)
+✔ F09B Actions after a loss are rejected and state is unchanged (0.096375ms)
+✔ F10A An unknown direction is rejected as invalid (0.056208ms)
+✔ F10B A missing direction is rejected as invalid (0.047791ms)
+✔ F11 Reaching the exit without the treasure does not win (0.3735ms)
+﹣ R01 Start: two rounds, no score (0.028167ms) # src/genre.ts selects "treasure"
+﹣ R02 A hit consumes one round and scores one (0.028708ms) # src/genre.ts selects "treasure"
+﹣ R03 A miss consumes one round without score (0.028334ms) # src/genre.ts selects "treasure"
+﹣ R04 Using the last round completes the range (0.023ms) # src/genre.ts selects "treasure"
+﹣ R05A An unknown event is rejected and state is unchanged (0.02825ms) # src/genre.ts selects "treasure"
+﹣ R05B Events after completion are rejected (0.019ms) # src/genre.ts selects "treasure"
+✔ last move onto the exit WITHOUT the treasure is a loss, not a win (1.066875ms)
+✔ final-move win: exit with the treasure on the LAST move is a win (0.092792ms)
+✔ a rejected move never shares objects with the input state (0.111375ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 6
+ℹ todo 0
+ℹ duration_ms 121.378334
+
+> p2-playable-typescript-game@1.0.0 check:browser
+> playwright test
+
+
+Running 10 tests using 1 worker
+
+  ✓   1 [chromium] › tests/browser/events.spec.mjs:14:1 › an actual action is recorded and visible in the local event view (447ms)
+  ✓   2 [chromium] › tests/browser/events.spec.mjs:29:1 › a restart starts a new run whose sequence begins at one (280ms)
+  ✓   3 [chromium] › tests/browser/events.spec.mjs:42:1 › collector failure is reported without undoing the action (154ms)
+  ✓   4 [chromium] › tests/browser/lifecycle.spec.mjs:5:1 › public start, progress, finish and fresh restart (392ms)
+  ✓   5 [chromium] › tests/browser/lifecycle.spec.mjs:26:1 › a rejected action is reported and leaves the state unchanged (222ms)
+  ✓   6 [chromium] › tests/browser/request-failure.spec.mjs:5:1 › loading is visible before the response, then the data is verified (216ms)
+  ✓   7 [chromium] › tests/browser/request-failure.spec.mjs:27:3 › HTTP failure is reported and no game starts from it (430ms)
+  ✓   8 [chromium] › tests/browser/request-failure.spec.mjs:27:3 › malformed JSON is reported and no game starts from it (135ms)
+  ✓   9 [chromium] › tests/browser/request-failure.spec.mjs:27:3 › unexpected definition is reported and no game starts from it (394ms)
+  ✓  10 [chromium] › tests/browser/request-failure.spec.mjs:37:1 › a failed reload preserves the last confirmed session (200ms)
+
+  10 passed (4.7s)

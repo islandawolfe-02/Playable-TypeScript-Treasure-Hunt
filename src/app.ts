@@ -22,7 +22,7 @@ let sequence = 0;
 
 const STATUS_TEXT: Record<GameState["status"], string> = {
   playing: "Playing: collect the treasure, then reach the exit.",
-  won: "You won! Press Restart to play again.",
+  won: "You won! Treasure secured. Press Restart for another adventure.",
   lost: "Out of moves: you lost. Press Restart to try again.",
 };
 
